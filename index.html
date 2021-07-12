@@ -14,20 +14,51 @@
         </h1>
     </div>
     <div id="description" class="description show">
-    <p>
-        This is a quiz on coding. Each question will have four multiple choice answers. You will have 60 seconds to
-        complete the quiz. Push the button to start!
-    </p>
+        <p>
+            This is a quiz on coding. Each question will have four multiple choice answers. You will have 60 seconds to
+            complete the quiz. Push the button to start!
+        </p>
     </div>
-    <div id="start" class="start show">
-        <button id="start" class="btn" onclick="startQuiz()">Start</button>
+    <section class="section show">
+        <div id="question-one" class="question hide">
+            <h3>
+                Test Question 1
+            </h3>
+            <ol class="question-elements">
+                <li><button type="button" href="#">False</a></li>
+                <li><button type="button" href="#">True</a></li>
+                <li><button type="button" href="#">False</a></li>
+                <li><button type="button" href="#">False</a></li>
+            </ol>
+        </div>
+        <div id="question-two" class="question hide">
+            <h3>
+                Test Question 2
+            </h3>
+            <ol class="question-elements">
+                <li><button type="button" href="#">False</a></li>
+                <li><button type="button" href="#">False</a></li>
+                <li><button type="button" href="#">False</a></li>
+                <li><button type="button" href="#">True</a></li>
+            </ol>
+        </div>
+    </section>
+    <div class="start">
+        <button class="start">Start</button>
     </div>
+    <form method="POST" class="hide">
+        <div class="initials">
+            <label for="intials">Please enter your initials</label>
+            <input type="text" name="initials" id="initials" />
+        </div>
+        <button id="confirm" type="button">Confirm</button>
+    </form>
     <div id="gameover" class="gameover hide">
         <h2>
             Time's Up!
         </h2>
     </div>
-    <h2 class="time"></h2>
+    <h2 class="time">5 second(s) remaining</h2>
 
     <script src="assets/script.js"></script>
 </body>

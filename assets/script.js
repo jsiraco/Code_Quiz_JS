@@ -1,33 +1,48 @@
 let score = 0;
-let initials = "";
 let secondsLeft = 5;
+let highScores = [];
 
 const timeEl = document.querySelector(".time");
+const start = document.querySelector(".start");
+const qSection = document.querySelector(".section");
+const Desc = document.getElementById("description");
+const gameover = document.getElementById("gameover");
+const questionOne = document.getElementById("question-one");
 
-let removeDesc = document.getElementById("description");
-let removeStart = document.getElementById("start");
-let gameover = document.getElementById("gameover");
+start.addEventListener("click", function (event) {
+    event.preventDefault();
+    startQuiz();
+});
 
 function startQuiz() {
     hideText();
     setTime();
+    questionsStart();
 }
 
 function hideText() {
-    removeStart.classList.remove("show");
-    removeStart.classList.add("hide");
+    start.classList.remove("show");
+    start.classList.add("hide");
 
-    removeDesc.classList.remove("show");
-    removeDesc.classList.add("hide");
+    Desc.classList.remove("show");
+    Desc.classList.add("hide");
+}
+
+function questionsStart() {
+    questionOne.classList.remove("hide");
+    questionOne.classList.add("show");
+}
+
+function nextQuestion() {
 
 }
 
 function setTime() {
-    let timerInterval = setInterval(function() {
+    let timerInterval = setInterval(function () {
         secondsLeft--;
         timeEl.textContent = secondsLeft + " second(s) remaining";
 
-        if(secondsLeft === 0) {
+        if (secondsLeft === 0) {
             clearInterval(timerInterval);
             sendMessage();
         }
@@ -37,7 +52,8 @@ function setTime() {
 
 function sendMessage() {
     timeEl.textContent = "";
-    let gameover = document.getElementById("gameover");
+    qSection.classList.remove("show");
+    qSection.classList.add("hide");
     gameover.classList.add("show");
 }
 
