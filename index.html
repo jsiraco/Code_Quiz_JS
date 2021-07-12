@@ -19,16 +19,16 @@
             complete the quiz. Push the button to start!
         </p>
     </div>
-    <section class="section show">
+    <section class="qSection show">
         <div id="question-one" class="question hide">
             <h3>
                 Test Question 1
             </h3>
             <ol class="question-elements">
-                <li><button type="button" href="#">False</a></li>
-                <li><button type="button" href="#">True</a></li>
-                <li><button type="button" href="#">False</a></li>
-                <li><button type="button" href="#">False</a></li>
+                <li><button type="button" class="false" href="#">False</a></li>
+                <li><button type="button" class="true" href="#">True</a></li>
+                <li><button type="button" class="false" href="#">False</a></li>
+                <li><button type="button" class="false" href="#">False</a></li>
             </ol>
         </div>
         <div id="question-two" class="question hide">
@@ -36,29 +36,41 @@
                 Test Question 2
             </h3>
             <ol class="question-elements">
-                <li><button type="button" href="#">False</a></li>
-                <li><button type="button" href="#">False</a></li>
-                <li><button type="button" href="#">False</a></li>
-                <li><button type="button" href="#">True</a></li>
+                <li><button type="button" class="false" href="#">False</a></li>
+                <li><button type="button" class="false" href="#">False</a></li>
+                <li><button type="button" class="false" href="#">False</a></li>
+                <li><button type="button" class="true" href="#">True</a></li>
             </ol>
         </div>
     </section>
     <div class="start">
         <button class="start">Start</button>
     </div>
-    <form method="POST" class="hide">
-        <div class="initials">
-            <label for="intials">Please enter your initials</label>
-            <input type="text" name="initials" id="initials" />
-        </div>
-        <button id="confirm" type="button">Confirm</button>
-    </form>
+    <section class="scoreSection hide">
+        <form method="POST" class="intials">
+            <div class="initials">
+                <label for="intials">Please enter your initials</label>
+                <br>
+                <input type="text" name="initials" id="initials" />
+            </div>
+            <button class="confirm-initials" type="button">Confirm</button>
+        </form>
+    </section>
     <div id="gameover" class="gameover hide">
         <h2>
             Time's Up!
         </h2>
     </div>
     <h2 class="time">5 second(s) remaining</h2>
+
+    <section class="highscores">
+        <h1>
+            Highscores
+        </h1>
+        <form id="highscore form" method="POST">
+            <ul id="highscore-list"></ul>
+        </form>
+    </section>
 
     <script src="assets/script.js"></script>
 </body>
