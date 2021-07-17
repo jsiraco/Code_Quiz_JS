@@ -79,14 +79,14 @@ function sendMessage() {
     scoreSection.classList.add("show");
 }
 
-// function scoreList() {
-//     for (let i = 0; i < listOfScores.length; i++) {
-//         let listChild = listOfScores[i];
+function scoreList() {
+    for (let i = 0; i < listOfScores.length; i++) {
+        let listChild = listOfScores[i];
 
-//         let li = document.createElement("li");
-//         li.textContent = listChild;
-//     }
-// }
+        let li = document.createElement("li");
+        li.textContent = listChild;
+    }
+}
 
 
 intialsConfrim.addEventListener("click", function () {
