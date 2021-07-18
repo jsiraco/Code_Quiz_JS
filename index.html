@@ -15,10 +15,11 @@
         </h1>
     </div>
     <div id="description" class="description show">
-        <p>
-            This is a quiz on coding. Each question will have four multiple choice answers. You will have 60 seconds to
+        <h3>
+            This is a quiz on coding. Each question will have four multiple choice answers. You will have 10 seconds to
             complete the quiz. Push the button to start!
-        </p>
+        </h3>
+        <button type="button" class="button score-btn" href="#">Highscores</button>
     </div>
     <section class="qSection show">
         <div id="question-one" class="question hide">
@@ -28,7 +29,7 @@
             <ol class="question-elements">
 
                 <li><button type="button" class="false button" href="#">False</a></li>
-                <li><button type="button" class="one-true button" href="#">True </a></li>
+                <li><button type="button" class="one-true true button" href="#">True </a></li>
                 <li><button type="button" class="false button" href="#">False</a></li>
                 <li><button type="button" class="false button" href="#">False</a></li>
             </ol>
@@ -41,7 +42,7 @@
                 <li><button type="button" class="false button" href="#">False</a></li>
                 <li><button type="button" class="false button" href="#">False</a></li>
                 <li><button type="button" class="false button" href="#">False</a></li>
-                <li><button type="button" class="two-true button" href="#">True </a></li>
+                <li><button type="button" class="two-true true button" href="#">True </a></li>
             </ol>
         </div>
         <div id="question-three" class="question hide">
@@ -49,7 +50,7 @@
                 Test Question 3
             </h3>
             <ol class="question-elements">
-                <li><button type="button" class="three-true button" href="#">true </a></li>
+                <li><button type="button" class="three-true true button" href="#">true </a></li>
                 <li><button type="button" class="false button" href="#">False</a></li>
                 <li><button type="button" class="false button" href="#">False</a></li>
                 <li><button type="button" class="false button" href="#">False</a></li>
@@ -61,7 +62,7 @@
             </h3>
             <ol class="question-elements">
                 <li><button type="button" class="false button" href="#">false</a></li>
-                <li><button type="button" class="four-true button" href="#">true </a></li>
+                <li><button type="button" class="four-true true button" href="#">true </a></li>
                 <li><button type="button" class="false button" href="#">False</a></li>
                 <li><button type="button" class="false button" href="#">False</a></li>
             </ol>
@@ -85,16 +86,19 @@
             Time's Up!
         </h2>
     </div>
-    <h2 class="time">5 second(s) remaining</h2>
+    <h2 class="time show">10 second(s) remaining</h2>
 
     <section class="highscores">
         <h1>
             Highscores
         </h1>
-        <form id="highscore form" method="POST">
-            <ul id="highscore-list"></ul>
-        </form>
+        <ul id="highscore-list"></ul>
+
     </section>
+    <ul id="myList"></ul>
+
+    <button class="button retry" type="button" href="#">Retry</button>
+
 
     <script src="assets/script.js"></script>
 </body>
