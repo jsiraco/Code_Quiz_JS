@@ -10,3 +10,24 @@ body {
     display: block;
 }
 
+.title h1 {
+   color: rgb(100, 2, 130);
+   background-color: rgb(196, 193, 193);
+   padding: 10px;
+}
+
+div.description p {
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.button {
+    background-color: #430253; 
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 15px 32px;
+    margin: 5px;
+    font-size: 16px;
+}

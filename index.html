@@ -4,6 +4,7 @@
 <head>
     <title>Code Quiz</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 
@@ -25,10 +26,11 @@
                 Test Question 1
             </h3>
             <ol class="question-elements">
-                <li><button type="button" class="false" href="#">False</a></li>
-                <li><button type="button" class="true" href="#">True</a></li>
-                <li><button type="button" class="false" href="#">False</a></li>
-                <li><button type="button" class="false" href="#">False</a></li>
+
+                <li><button type="button" class="false button" href="#">False</a></li>
+                <li><button type="button" class="true button" href="#">True </a></li>
+                <li><button type="button" class="false button" href="#">False</a></li>
+                <li><button type="button" class="false button" href="#">False</a></li>
             </ol>
         </div>
         <div id="question-two" class="question hide">
@@ -36,15 +38,37 @@
                 Test Question 2
             </h3>
             <ol class="question-elements">
-                <li><button type="button" class="false" href="#">False</a></li>
-                <li><button type="button" class="false" href="#">False</a></li>
-                <li><button type="button" class="false" href="#">False</a></li>
-                <li><button type="button" class="true" href="#">True</a></li>
+                <li><button type="button" class="false button" href="#">False</a></li>
+                <li><button type="button" class="false button" href="#">False</a></li>
+                <li><button type="button" class="false button" href="#">False</a></li>
+                <li><button type="button" class="true button" href="#">True </a></li>
+            </ol>
+        </div>
+        <div id="question-three" class="question hide">
+            <h3>
+                Test Question 3
+            </h3>
+            <ol class="question-elements">
+                <li><button type="button" class="true button" href="#">true </a></li>
+                <li><button type="button" class="false button" href="#">False</a></li>
+                <li><button type="button" class="false button" href="#">False</a></li>
+                <li><button type="button" class="false button" href="#">False</a></li>
+            </ol>
+        </div>
+        <div id="question-four" class="question hide">
+            <h3>
+                Test Question 4
+            </h3>
+            <ol class="question-elements">
+                <li><button type="button" class="false button" href="#">false</a></li>
+                <li><button type="button" class="true button" href="#">true </a></li>
+                <li><button type="button" class="false button" href="#">False</a></li>
+                <li><button type="button" class="false button" href="#">False</a></li>
             </ol>
         </div>
     </section>
     <div class="start">
-        <button class="start">Start</button>
+        <button class="start button">Start</button>
     </div>
     <section class="scoreSection hide">
         <form method="POST" class="intials">
@@ -53,7 +77,7 @@
                 <br>
                 <input type="text" name="initials" id="initials" />
             </div>
-            <button class="confirm-initials" type="button">Confirm</button>
+            <button class="confirm-initials button" type="button">Confirm</button>
         </form>
     </section>
     <div id="gameover" class="gameover hide">
