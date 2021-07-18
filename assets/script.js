@@ -52,6 +52,7 @@ function init() {
 //renders the list of highscores
 function renderScores() {
     let data = JSON.parse(localStorage.getItem("highScore"));
+    data.sort();
 
     data.forEach((item) => {
         let li = document.createElement("li");
