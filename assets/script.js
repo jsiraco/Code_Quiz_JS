@@ -12,7 +12,11 @@ const questionThree = document.getElementById("question-three");
 const questionFour = document.getElementById("question-four");
 
 
-const answerEl = document.querySelector(".true");
+const answerEl = document.querySelector(".one-true");
+const answerElTwo = document.querySelector(".two-true");
+const answerElThree = document.querySelector(".three-true");
+const answerElFour = document.querySelector(".four-true");
+
 const wrong = document.querySelector(".false");
 
 const scoreSection = document.querySelector(".scoreSection");
@@ -119,11 +123,37 @@ start.addEventListener("click", function (event) {
 
 answerEl.addEventListener("click", function () {
     let newScore = scoreCount++;
-        questionOne.classList.remove("show");
-        questionOne.classList.add("hide");
+    questionOne.classList.remove("show");
+    questionOne.classList.add("hide");
 
-        questionTwo.classList.remove("hide");
-        questionTwo.classList.add("show");
+    questionTwo.classList.remove("hide");
+    questionTwo.classList.add("show");
+    return newScore;
+});
+
+answerElTwo.addEventListener("click", function () {
+    let newScore = scoreCount++;
+    questionTwo.classList.remove("show");
+    questionTwo.classList.add("hide");
+
+    questionThree.classList.remove("hide");
+    questionThree.classList.add("show");
+    return newScore;
+});
+
+answerElThree.addEventListener("click", function () {
+    let newScore = scoreCount++;
+    questionThree.classList.remove("show");
+    questionThree.classList.add("hide");
+
+    questionFour.classList.remove("hide");
+    questionFour.classList.add("show");
+    return newScore;
+});
+
+answerElFour.addEventListener("click", function () {
+    let newScore = scoreCount++;
+    secondsLeft = 0;
     return newScore;
 });
 
