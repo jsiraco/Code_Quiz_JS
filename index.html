@@ -1,5 +1,7 @@
+<!-- initializes -->
 <!DOCTYPE html>
 <html lang="en">
+<!-- title & links to styles -->
 
 <head>
     <title>Code Quiz</title>
@@ -8,69 +10,77 @@
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 
+<!-- header -->
+
 <body>
     <div class="title">
         <h1>
             Code Quiz
         </h1>
     </div>
+    <!-- the desc has a hidden class applied to it, so it isn't shown until js makes it shown -->
     <div id="description" class="description show">
         <h3>
-            This is a quiz on coding. Each question will have four multiple choice answers. You will have 10 seconds to
+            This is a quiz on coding. Each question will have four multiple choice answers. You will have 8 seconds to
             complete the quiz. Push the button to start!
         </h3>
         <button type="button" class="button score-btn" href="#">Highscores</button>
     </div>
+    <!-- First question, starts hidden. Each question has a class that lets the js know if its true or false -->
     <section class="qSection show">
         <div id="question-one" class="question hide">
             <h3>
-                Test Question 1
+                JSON stand for:
             </h3>
             <ol class="question-elements">
-
-                <li><button type="button" class="false button" href="#">False</a></li>
-                <li><button type="button" class="one-true true button" href="#">True </a></li>
-                <li><button type="button" class="false button" href="#">False</a></li>
-                <li><button type="button" class="false button" href="#">False</a></li>
+                <li><button type="button" class="false button" href="#">Java Series Object Notation</a></li>
+                <li><button type="button" class="one-true true button" href="#">Javascript Object Notation</a></li>
+                <li><button type="button" class="false button" href="#">J++ Series Object Notation</a></li>
+                <li><button type="button" class="false button" href="#">Javascript Series Object Number</a></li>
             </ol>
         </div>
+        <!-- second question, starts hidden -->
         <div id="question-two" class="question hide">
             <h3>
-                Test Question 2
+                Which of these are the three languages of the web?
             </h3>
             <ol class="question-elements">
-                <li><button type="button" class="false button" href="#">False</a></li>
-                <li><button type="button" class="false button" href="#">False</a></li>
-                <li><button type="button" class="false button" href="#">False</a></li>
-                <li><button type="button" class="two-true true button" href="#">True </a></li>
+                <li><button type="button" class="false button" href="#">HTML, CSS, Java</a></li>
+                <li><button type="button" class="false button" href="#">PERL, FORTRAN, HTML</a></li>
+                <li><button type="button" class="false button" href="#">HTML, CSS, and Ruby</a></li>
+                <li><button type="button" class="two-true true button" href="#">HTML, CSS, and Javascript</a></li>
             </ol>
         </div>
+        <!-- third question -->
         <div id="question-three" class="question hide">
             <h3>
-                Test Question 3
+                What year was ECMAScript first implemented?
             </h3>
             <ol class="question-elements">
-                <li><button type="button" class="three-true true button" href="#">true </a></li>
-                <li><button type="button" class="false button" href="#">False</a></li>
-                <li><button type="button" class="false button" href="#">False</a></li>
-                <li><button type="button" class="false button" href="#">False</a></li>
+                <li><button type="button" class="three-true true button" href="#">1997</a></li>
+                <li><button type="button" class="false button" href="#">2011</a></li>
+                <li><button type="button" class="false button" href="#">1991</a></li>
+                <li><button type="button" class="false button" href="#">1776</a></li>
             </ol>
         </div>
+        <!-- fourth question -->
         <div id="question-four" class="question hide">
             <h3>
-                Test Question 4
+                What kind of variable is available everywhere in your Javascript file?
             </h3>
             <ol class="question-elements">
-                <li><button type="button" class="false button" href="#">false</a></li>
-                <li><button type="button" class="four-true true button" href="#">true </a></li>
-                <li><button type="button" class="false button" href="#">False</a></li>
-                <li><button type="button" class="false button" href="#">False</a></li>
+                <li><button type="button" class="false button" href="#">String</a></li>
+                <li><button type="button" class="four-true true button" href="#">Global</a></li>
+                <li><button type="button" class="false button" href="#">Local</a></li>
+                <li><button type="button" class="false button" href="#">Ghost</a></li>
             </ol>
         </div>
     </section>
+    <!-- the start quiz button, has functions attached that start timer and quiz -->
     <div class="start">
         <button class="start button">Start</button>
     </div>
+    <!-- The form where the user inputs their initials -->
     <section class="scoreSection hide">
         <form method="POST" class="intials">
             <div class="initials">
@@ -81,25 +91,28 @@
             <button class="confirm-initials button" type="button">Confirm</button>
         </form>
     </section>
+    <!-- The gameover message -->
     <div id="gameover" class="gameover hide">
         <h2>
             Time's Up!
         </h2>
     </div>
-    <h2 class="time show">10 second(s) remaining</h2>
+    <!-- timer display -->
+    <h2 class="time show">8 second(s) remaining</h2>
 
-    <section class="highscores">
+    <!-- The highscores are listed here and start hidden -->
+    <section class="highscores hide">
         <h1>
             Highscores
         </h1>
-        <ul id="highscore-list"></ul>
 
     </section>
     <ul id="myList"></ul>
 
+    <!-- Button that reloads the page allowing the user to retry at any point -->
     <button class="button retry" type="button" href="#">Retry</button>
 
-
+    <!-- link to js -->
     <script src="assets/script.js"></script>
 </body>
 

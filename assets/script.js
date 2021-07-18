@@ -1,6 +1,6 @@
 //Global variables for score, time, highscores
 let scoreCount = 0;
-let secondsLeft = 10;
+let secondsLeft = 8;
 let highScores = [];
 let scores = [];
 
@@ -40,17 +40,16 @@ const retryBtn = document.querySelector(".retry");
 
 let list = document.getElementById("myList");
 
-
-function getScore() {
-    localStorage.getItem("score", scoreCount);
-}
-
 //renders the scores upon page load
 function init() {
-    renderScores();
-    getScore();
+
+    let storedHighScores = JSON.parse(localStorage.getItem("highScore"));
+    if (storedHighScores !== null) {
+        highScores = storedHighScores;
+    } 
 }
 
+//renders the list of highscores
 function renderScores() {
     let data = JSON.parse(localStorage.getItem("highScore"));
 
@@ -59,12 +58,6 @@ function renderScores() {
         li.innerText = JSON.stringify(item);
         list.appendChild(li);
     })
-
-    let storedHighScores = JSON.parse(localStorage.getItem("scores"));
-
-    if (storedHighScores !== null) {
-        highScores = storedHighScores;
-    }
 }
 
 //Calls the function to hide text, show questions, and start the timer
@@ -116,6 +109,8 @@ function sendMessage() {
     scoreSection.classList.add("show");
 }
 
+//This function creates a new object using the users score and initials
+//
 function createHighScore() {
     let newHighScores = {
         intials: intialsInput.value.trim().toUpperCase(),
@@ -134,6 +129,7 @@ function createHighScore() {
 }
 
 
+//When user's initials are entered, the highscores are shown and the users score is added
 intialsConfrim.addEventListener("click", function () {
 
     scoreSection.classList.add("hide");
@@ -165,6 +161,8 @@ scoreBtn.addEventListener("click", function () {
     timeEl.classList.add("hide");
     timeEl.classList.remove("show");
     hideText();
+    createHighScore();
+    renderScores();
 
 
 });

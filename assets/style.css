@@ -2,26 +2,31 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/* Added to classes to remove them from the page dynamically */
 .hide {
     display:none;
 }
 
+/* applied to classes to add them to the page dynamically */
 .show {
     display: block;
 }
 
+/* Styles title */
 .title h1 {
    color: rgb(100, 2, 130);
    background-color: rgb(196, 193, 193);
    padding: 10px;
 }
 
+/* styles descritpion */
 div.description p {
     font-size: 18px;
     padding-left: 10px;
     padding-right: 10px;
 }
 
+/* Styles button */
 .button {
     background-color: #430253; 
     border: none;
@@ -33,11 +38,18 @@ div.description p {
     transition-duration: 0.25s;
 }
 
+/* Adds hover */
 .button:hover {
     background-color: #a275ad;
 }
 
-li.list-item {
+/* styles the background color of the highscores */
+ul li {
     background-color: #a275ad;
+    max-width: fit-content;
+}
 
+/* tiger-stripes the odds */
+ul li:nth-child(odd) {
+    background-color: #e2a5f1;
 }
